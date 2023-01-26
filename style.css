@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body * {
+    font-family: 'chillax', sans-serif;
+    color: #E1E1E6;;
+}
+
+body {
+    font-size: 1.6rem;
+    background: hsl(0, 0%, 0%);
+}
+
+#app {
+    width: min(112rem, 95%);
+    margin: 0 auto;
+    padding: calc(3.2rem + 5vh) 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8.7rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    padding: 0;
+    height: 1px;
+    margin: -1;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.search {
+    display: flex;
+    gap: .8rem;
+}
+
+.search input:focus-visible {
+    outline: 1px solid #4A808C;
+}
+
+.search input {
+    width: clamp(15rem, 30vw, 46.2rem);
+    background: hsl(191, 65%, 7%);
+    color: hsla(0, 0%, 100%, 0.671);
+    border: none;
+    border-radius: .5rem;
+    padding: 1.6rem;
+}
+
+.search button {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    border: none;
+    border-radius: .5rem;
+    padding: 1.2rem 3rem;
+    background: #4A808C;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    transition: all .3s;
+}
+
+.search button:hover {
+    background: #FFFFFF;
+    color: #4A808C;
+}
+
+.search button:hover svg path {
+    transition: all .3s;
+    fill: #4A808C;
+}
+
+.hidden {
+    display: none;
+}
+
+.table {
+    border: 1px solid hsl(191, 31%, 42%);
+    border-radius: 1.2rem;
+    overflow: hidden;
+}
+
+table,
+table button {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead {
+    text-align: left;
+    background: hsl(194, 72%, 13%);;
+}
+
+thead tr th {
+    padding: 1.6rem 0;
+}
+
+thead tr {
+    display: flex;
+}
+
+tbody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 52rem;
+    overflow-y: overlay;
+    background: #030B0D;
+}
+
+tbody::-webkit-scrollbar {
+    width: .6rem;
+    cursor: pointer;
+}
+
+tbody::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+tbody::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: #4A808C;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+tbody tr {
+    display: flex;
+    align-items: center;
+}
+
+thead tr th:nth-child(1),
+tbody tr td:nth-child(1) {
+    width: min(50rem, 44vw);
+    padding-left: 4rem;
+}
+
+thead tr th:nth-child(2),
+tbody tr td:nth-child(2) {
+    width: min(20rem, 20vw);
+}
+
+thead tr th:nth-child(3),
+tbody tr td:nth-child(3) {
+    width: min(21.8rem, 21vw);
+}
+
+thead tr th:nth-child(4),
+tbody tr td:nth-child(4) {
+    width: min(17.8rem, 15vw);
+}
+
+tbody tr td {
+    padding: 2.4rem 0;
+}
+
+tbody .user {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+tbody .user img {
+    width: 5.6rem;
+    border-radius: 50%;
+}
+
+.user a,
+.user span {
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.user span {
+    color: hsla(355, 91%, 66%, 1);
+}
+
+table tbody tr:nth-child(odd) {
+    background: hsla(195, 61%, 6%, 0.5);
+
+}
+
+tr:nth-child(even) {
+    background: hsla(192, 65%, 7%, 1);
+}
+
+table tbody tr + tr {
+    border-top: 1px solid hsl(191, 31%, 42%);
+}
+
+.remove {
+    background: transparent;
+    border: none;
+    color: hsla(355, 91%, 66%, 1);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.remove:hover {
+    scale: 1.1;
+    color: rgb(255, 221, 205);
+}
+
+.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52.2rem;
+}
+
+.empty td {
+    width: min(112rem, 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 4rem;
+    padding: 0;
+    gap: 6rem;
+}
+
+.empty-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+}
+
+.empty img {
+    height: clamp(7rem, -0.56rem + 10.8vw, 15rem);
+}
+
+.empty p {
+    font-weight: 700;
+    font-size: clamp(1.5rem, 0.08rem + 2vw, 3rem);
+    color: hsla(189, 4%, 32%, 1);
+}
+
+
+
